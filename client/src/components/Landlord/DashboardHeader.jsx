@@ -1,16 +1,16 @@
-import { Bell } from "lucide-react";
+import { Bell, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getNotifications } from "../../state/Notification/Action";
-
+import { useOutletContext } from "react-router-dom";
 const DashboardHeader = ({ title }) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const { user, jwt } = useSelector((state) => state.auth);
   const { notifications } = useSelector((state) => state.notification);
   const navigate = useNavigate();
-
+  const { openSidebar } = useOutletContext();
   // Fetch notifications when JWT becomes available
   useEffect(() => {
     if (!jwt) return;
@@ -23,12 +23,20 @@ const DashboardHeader = ({ title }) => {
     <header
       className="
         sticky top-0 z-30
-        h-16 px-6
-        flex items-center justify-between
+        h-16 md:px-6
+        flex items-center justify-evenly md:justify-between
         bg-gradient-to-b from-slate-50 to-white
         shadow-md shadow-indigo-200 border border-gray-200
       "
     >
+      <div className="md:hidden h-14 flex">
+        <button
+          onClick={openSidebar}
+          className="md:hidden rounded-md hover:bg-slate-100"
+        >
+          <Menu size={22} />
+        </button>
+      </div>
       <div>
         <h1 className="text-xl font-semibold text-slate-800 tracking-tight">
           {title}

@@ -100,9 +100,12 @@ const Sidebar = ({ isOpen, onClose }) => {
           ))}
         </nav>
 
-        <div className="p-4 mb-10 md:mb-0">
+        <div className="p-4 mb-2 md:mb-0">
           <button
-            onClick={() => navigate("my-account")}
+            onClick={() => {
+              onClose(); 
+              navigate("my-account");
+            }}
             className="group flex items-center gap-3 w-full px-4 py-3 text-sm font-medium
             text-slate-500 hover:text-white rounded-xl transition hover:bg-gray-500 shadow cursor-pointer"
           >
