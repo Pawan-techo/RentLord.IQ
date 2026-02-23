@@ -3,10 +3,11 @@ import Navbar from "../components/Home/Navbar";
 import Home from "../Pages/Home";
 import Register from "../components/Auth/Register";
 import Login from "../components/Auth/Login";
-import AcceptInvitation from "../components/tenant/acceptInvitation";
+import AcceptInvitation from "../components/tenant/AcceptInvitation";
 import AcceptExistingInvite from "../components/tenant/AcceptExistingInvite";
 import BookDemo from "../components/Home/BookDemo";
 import About from "../components/Home/About";
+
 const HomeRoutes = () => {
   return (
     <div>
