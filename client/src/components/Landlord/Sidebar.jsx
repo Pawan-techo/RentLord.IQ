@@ -100,7 +100,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           ))}
         </nav>
 
-        <div className="p-4 mb-2 md:mb-0">
+        <div className="p-4 mb-10 md:mb-0">
           <button
             onClick={() => {
               onClose(); 
