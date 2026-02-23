@@ -61,13 +61,13 @@ const Hero = () => {
           <div className="mt-10 flex justify-center gap-4">
             <button
               onClick={() => navigate("/register/landlord")}
-              className="bg-indigo-700 shadow-md hover:scale-102 text-white px-8 py-3 rounded-lg font-semibold cursor-pointer"
+              className="bg-indigo-700 shadow-md flex-none hover:scale-102 text-white px-8 py-3 rounded-lg font-semibold cursor-pointer"
             >
               Get Started Free
             </button>
             <button
               onClick={() => navigate("/book-demo")}
-              className="border border-indigo-700 shadow-md hover:text-black hover:scale-102 text-indigo-700 px-8 py-3 rounded-lg font-semibold cursor-pointer"
+              className="border border-indigo-700 flex-none shadow-md hover:text-black hover:scale-102 text-indigo-700 px-8 py-3 rounded-lg font-semibold cursor-pointer"
             >
               Book a Demo
             </button>

@@ -8,7 +8,6 @@ import {
   Wrench,
   Bell,
   LogOut,
-  X,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -47,12 +46,12 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       <aside
         className={`
-          fixed top-0 left-0 z-50 h-screen w-64
+          fixed top-0 left-0 z-100 h-screen w-64
           bg-gradient-to-b from-slate-50 to-white
           shadow-md shadow-indigo-200 border border-gray-200
           flex flex-col
-          transition-transform duration-300
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}
+          transition-transform duration-300 ease-in-out
+          transform ${isOpen ? "translate-x-0" : "-translate-x-full"}
           md:translate-x-0
         `}
       >
@@ -64,13 +63,6 @@ const Sidebar = ({ isOpen, onClose }) => {
               className="object-contain scale-150"
             />
           </div>
-
-          <button
-            onClick={onClose}
-            className="md:hidden text-slate-500 hover:text-slate-800"
-          >
-            <X size={20} />
-          </button>
         </div>
 
         <nav className="flex-1 px-3 mt-4 space-y-1">
