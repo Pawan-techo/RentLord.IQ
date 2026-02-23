@@ -121,7 +121,7 @@ export default function Login() {
           <button
             onClick={() => navigate("/register/landlord")}
             type="button"
-            className="px-5 py-2 flex-none text-indigo-800 rounded-md hover:bg-indigo-100 font-medium border border-indigo-800 transition cursor-pointer"
+            className="px-4 py-2 flex-none text-sm text-indigo-800 rounded-md hover:bg-indigo-100 font-medium border border-indigo-800 transition cursor-pointer"
           >
             Register As Landlord
           </button>
@@ -129,7 +129,7 @@ export default function Login() {
           <button
             type="button"
             onClick={() => navigate("/")}
-            className="px-10 py-2 flex-none border border-gray-500 hover:bg-gray-100 rounded-md transition cursor-pointer"
+            className="px-10 py-2 flex-none text-sm border border-gray-500 hover:bg-gray-100 rounded-md transition cursor-pointer"
           >
             Go Back
           </button>
