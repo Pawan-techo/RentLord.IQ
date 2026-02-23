@@ -1,0 +1,40 @@
+@import "tailwindcss";
+/* global.css */
+
+.nav-link {
+  @apply text-gray-700 hover:text-indigo-800 font-medium transition;
+}
+
+.mobile-link {
+  @apply block w-full px-3 py-3 rounded-lg text-gray-800 font-medium 
+         hover:bg-indigo-50 hover:text-indigo-800 transition;
+         
+}body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.08);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo-beat {
+  animation: beat 900ms infinite ease-in-out;
+}
