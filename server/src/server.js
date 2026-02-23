@@ -2,7 +2,7 @@ import connectDB from "./config/db.js";
 import app from "./index.js";
 import "dotenv/config";
 import "./services/subscriptionCron.js"; 
-
+import cors from "cors";
 const PORT = process.env.PORT || 3033;
 let isConnected = false;
 async function connectOnce() {
@@ -16,6 +16,12 @@ async function connectOnce() {
     }
   }
 }
+
+app.use(cors({
+  origin: "https://rentlordiq.vercel.app",
+  credentials: true
+}));
+
 connectOnce();
 if (!process.env.VERCEL) {
   app.listen(PORT, () => {
