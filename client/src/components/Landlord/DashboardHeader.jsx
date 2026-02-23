@@ -65,7 +65,7 @@ const DashboardHeader = ({ title }) => {
           {open && (
             <div
               className="
-                absolute right-0 mt-3 w-80
+                absolute right-0 mt-3 w-70 md:w-80 
                 bg-white rounded-lg shadow-md shadow-indigo-200
                 border border-gray-200
                 overflow-hidden
